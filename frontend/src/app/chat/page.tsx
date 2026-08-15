@@ -1,7 +1,10 @@
 'use client';
 
-import { MainLayout } from '@/components/layout';
+import React from 'react';
+import { WorkspaceView } from '@/components/views/WorkspaceView';
+import { useRouter } from 'next/navigation';
 
 export default function ChatPage() {
-  return <MainLayout />;
+  const router = useRouter();
+  return <WorkspaceView onBackToLanding={() => router.push('/')} />;
 }
